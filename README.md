@@ -1,3 +1,7 @@
+# Live Version
+
+View live version [here](https://react-project-03-reviews.netlify.app).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
