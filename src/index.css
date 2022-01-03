@@ -1,0 +1,232 @@
+/* Quick Resets */
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  --text-white: #FAFAFA;
+  --text-white-alt: #FEFEFE;
+  --text-grey: #617D98;
+  --text-grey-alt: #747F8A;
+  --text-dark: #3E3D41;
+  --text-blue: #8EC8F1;
+  --text-blue--alt: #49A6E9;
+  --text-blue--hover: #49A6E9;
+  --bg-white: #FAFAFA;
+  --bg-white-alt: #FEFEFE;
+  --bg-off-white: #F1F5F8;
+  --bg-dark: #3E3D41;
+  --bg-blue: #49A6E9;
+  --bg-blue-alt: #E6F5FF;
+  --border-radius-1: 1%;
+  --border-radius-50: 50%;
+  --shadow: 0 3px 10px rgba(125, 125, 125, 0.2);
+  --shadow-hover: 0 3px 15px rgba(125, 125, 125, 0.3);
+  --transition-color: color 0.2s ease-in-out;
+  --transition-bg: background-color 0.2s ease-in-out;
+  --transition-shadow: box-shadow 0.3s ease-in-out;
+}
+
+/* Body */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-grey-alt);
+  background-color: var(--bg-off-white);
+}
+
+/* General Elements Styling */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-dark);
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: 1.5px;
+  margin-bottom: 6px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+/* General Class Styling */
+.centre-content {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+}
+
+/* Main Container */
+.container {
+  width: 80vw;
+  max-width: 620px;
+}
+
+/* Heading Underline */
+.underline {
+  width: 80px;
+  height: 4px;
+  margin: auto;
+  background-color: var(--bg-blue);
+}
+
+
+/********* REVIEWS LOADING *********/
+
+/* Loading */
+.loading {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  place-items: center;
+  text-align: center;
+}
+
+.loading h2 {
+  font-size: 2rem;
+  transition: font-size 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 500px) {
+  .loading h2 {
+    font-size: 4rem;
+  }
+}
+
+
+/********* REVIEWS *********/
+
+/* Main Heading */
+.container .main-heading {
+  margin-bottom: 64px;
+}
+
+/* Reviews Container */
+.container .reviews {
+  background-color: var(--bg-white);
+  padding: 32px 32px;
+  border-radius: var(--border-radius-1);
+  box-shadow: var(--shadow);
+  transition: var(--transition-shadow);
+}
+
+.container .reviews:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+/* Author Image Container */
+.container .reviews .review .image-container {
+  width: 150px;
+  height: 150px;
+  border-radius: var(--border-radius-50);
+  margin: 0 auto 16px;
+  position: relative;
+}
+
+.container .reviews .review .image-container::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-blue);
+  border-radius: var(--border-radius-50);
+  position: absolute;
+  top: -4px;
+  right: -8px;
+}
+
+/* Author Image */
+.container .reviews .review .image-container .author-image {
+  object-fit: cover;
+  border-radius: var(--border-radius-50);
+  position: relative;
+}
+
+/* Author Image - Quote */
+.container .reviews .review .image-container .right-quote {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  color: var(--text-white);
+  background-color: var(--bg-blue);
+  border-radius: var(--border-radius-50);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(25%);
+}
+
+/* Author Info */
+.container .reviews .review .author-info {
+  margin-bottom: 12px;
+}
+
+/* Author Info - Name */
+.container .reviews .review .author-info .author-name {
+  font-weight: 600;
+}
+
+/* Author Info - Job */
+.container .reviews .review .author-info .author-job {
+  font-size: 0.9rem;
+  color: var(--text-blue);
+  text-transform: uppercase;
+}
+
+/* Comment */
+.container .reviews .review .comment {
+  margin-bottom: 16px;
+}
+
+/* Review Navigation Buttons */
+.container .reviews .review .reviews-navigation {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.container .reviews .review .reviews-navigation button {
+  font-size: 1.25rem;
+  color: var(--text-blue);
+  background: none;
+  border: none;
+  margin: 0 8px;
+  transition: var(--transition-color);
+}
+
+.container .reviews .review .reviews-navigation button:hover {
+  color: var(--text-blue--hover);
+}
+
+.container .reviews .review .reviews-navigation button:active {
+  color: var(--text-dark);
+}
+
+/* Random Review Button */
+.container .reviews .review .random-review {
+  font-size: 0.9rem;
+  letter-spacing: 0.75px;
+  color: var(--text-blue--alt);
+  display: block;
+  margin: auto;
+  background-color: var(--bg-blue-alt);
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  transition: var(--transition-color), var(--transition-bg);
+}
+
+.container .reviews .review .random-review:hover {
+  color: var(--text-white);
+  background-color: var(--bg-blue);
+}
+
+.container .reviews .review .random-review:active {
+  background-color: var(--bg-dark);
+}
