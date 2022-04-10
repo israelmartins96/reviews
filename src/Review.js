@@ -4,7 +4,7 @@ import React from 'react';
 // Font Awesome Icons
 import { FaQuoteRight, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
-// ***COMPONENT*** //
+// ***COMPONENT FOR THE REVIEWS*** //
 const Review = ( { reviews } ) => {
     // Reviews Index
     const [index, setIndex] = React.useState(0);
