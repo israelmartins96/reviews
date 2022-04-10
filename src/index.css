@@ -69,6 +69,13 @@ p {
   max-width: 620px;
 }
 
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 2.5rem 2rem;
+  }
+}
+
 /* Heading Underline */
 .underline {
   width: 80px;
